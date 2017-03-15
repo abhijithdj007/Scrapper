@@ -6,9 +6,9 @@
 </div>
 <div class="row">
 	<div class="col-sm-12"> 
-		<%= form_for(:scrapper, :url => scrap_domain_path, method: :post, :remote => true, :html =>{:id => "scrapper_form"}) do |f| %>
+		<%= form_for(@domain, :url => scrap_domain_path, method: :post, :remote => true, :html =>{:id => "scrapper_form"}) do |f| %>
 			<div class="form-group">
-				<%= f.url_field :website_url, class: "form-control", placeholder: "eg: https://www.hackerearth.com", required: true %>
+				<%= f.url_field :url, class: "form-control", placeholder: "eg: https://www.hackerearth.com", required: true %>
 			</div>
 
 			<%= f.submit "Submit", class: "btn btn-primary" %>
