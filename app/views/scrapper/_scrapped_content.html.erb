@@ -1,0 +1,6 @@
+<h3>How popular is <%= @domain.url %>?</h3>
+<p>Global Rank: <span><%= @scrap_info.global_rank %></span></p>
+<p>India Rank: <span><%= @scrap_info.india_rank %></span></p>
+<div id="container">
+</div>
+<%= render "highchart_line_graph" %>

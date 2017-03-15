@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    Highcharts.chart('container', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Website Ranking'
+        },
+        subtitle: {
+            text: 'Source: alexa.com'
+        },
+        xAxis: {
+            categories: <%= raw(@graph_report[0]) %>
+        },
+        yAxis: {
+            title: {
+                text: ''
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Global Rank',
+            data: <%= raw(@graph_report[1]) %>
+        }, {
+            name: 'India Rank',
+            data: <%= raw(@graph_report[2]) %>
+        }]
+    });
+</script>
